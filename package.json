@@ -2,6 +2,10 @@
   "private": true,
   "name": "github-action-demo",
   "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sunyonghua/github-action-demo.git"
+  },
   "scripts": {
     "start": "dumi dev",
     "docs:build": "dumi build",
