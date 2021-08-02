@@ -10,6 +10,6 @@ jobs:
     steps:
       - uses: actions/setup-node@v2
       - name: build package
-        run: npm run deploy
+        run: npm install && npm run deploy
       - name: complate
         run: echo success,
