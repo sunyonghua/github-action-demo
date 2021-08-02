@@ -1,20 +1,15 @@
 # This is a basic workflow to help you get started with Actions
 
 name: CI
-
 on:
   push:
     branches: [ main ]
-
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v2
-      - name: 发布分支
-        run: echo Hello, world!
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+      - uses: actions/set-up-node@v2
+      - name: build package
+        run: npm run deploy
+      - name: complate
+        run: echo success,
