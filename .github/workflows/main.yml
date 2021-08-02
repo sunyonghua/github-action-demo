@@ -17,5 +17,7 @@ jobs:
         run: npm install
       - name: build
         run: npm run deploy
+      - name: set auth
+        run: git config --global user.email "yonghua.s@icloud.com" && git config --global user.name "sunyonghua"
       - name: complate
         run: echo success,
