@@ -11,11 +11,11 @@ jobs:
         with:
           node-version: '10.14.x'
           registry-url: 'https://registry.npmjs.org'
-      - name: install
+      - name: 安装依赖 并且 打包
         run: npm install && npm run docs:build
-      - name: deploy
+      - name: 执行发布
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
           ACCESS_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
-      - name: complate
-        run: echo success,
+          BRANCH: gh-pages
+          FOLDER: docs-dist
